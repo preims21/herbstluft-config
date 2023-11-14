@@ -10,7 +10,6 @@
 
 sleep .15
 DIR1="/usr/bin/"
-DIR2="/bin/"
 
-Menu="$(ls "$DIR1" "$DIR2"  | cut -d / -f 3 | uniq -u | sort | fzf --prompt="Welches Programm möchtest du starten: " --border=rounded --margin=5% --color='fg:104,fg+:255,pointer:12,hl:255,hl+:12,header:12,prompt:255' --height 100% --reverse --header="             Amwendungstarter 3000" --info=hidden --header-first)" 
+Menu="$(ls "$DIR1" | cut -d / -f 3 | uniq -u | sort | fzf --prompt="Welches Programm möchtest du starten: " --border=rounded --margin=5% --color='fg:104,fg+:255,pointer:12,hl:255,hl+:12,header:12,prompt:255' --height 100% --reverse --header="             Amwendungstarter 3000" --info=hidden --header-first)" 
 exec devour "$Menu"

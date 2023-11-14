@@ -6,6 +6,8 @@ hc() {
     herbstclient "$@"
 }
 
+numlockx on
+
 xwallpaper --zoom ~/Bilder/mysteryshack.jpg
 
 xrandr --newmode "3440x1440_165.00"  1265.25  3440 3752 4136 4832  1440 1443 1453 1588 -hsync +vsync
@@ -188,4 +190,4 @@ hc unlock
 # hc detect_monitors
 
 # find the panel
-polybar
+polybar &
